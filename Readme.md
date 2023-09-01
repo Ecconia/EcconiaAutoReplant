@@ -9,6 +9,8 @@ Also requires the Fabric-API.
 
 On interacting with a crop plant that is fully mature, the plant will be destroyed and if a seed for that plant is available in the hotbar, it will be selected and planted.
 
+Also supports nether warts.
+
 ## Why another one?
 
 Because apparently all the others I found (even though they have more features and are better), need a server mod.
