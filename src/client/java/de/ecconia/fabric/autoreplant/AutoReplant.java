@@ -60,7 +60,7 @@ public class AutoReplant implements ClientModInitializer
 	{
 		if(!client.interactionManager.attackBlock(hit.getBlockPos(), hit.getSide()))
 		{
-			player.sendMessage(Text.literal("[AutoReplant] Not able to break block..."));
+			player.sendMessage(Text.literal("[AutoReplant] Not able to break block..."), false);
 			//At this point, normal interaction may happen:
 			return ActionResult.PASS;
 		}
@@ -82,7 +82,7 @@ public class AutoReplant implements ClientModInitializer
 			//End life:
 			return ActionResult.FAIL;
 		}
-		playerInventory.selectedSlot = matchingSlot;
+		playerInventory.setSelectedSlot(matchingSlot);
 		
 		BlockPos fieldBlockPos = pos.down();
 		if(!client.interactionManager.interactBlock(client.player, Hand.MAIN_HAND, new BlockHitResult(
@@ -92,7 +92,7 @@ public class AutoReplant implements ClientModInitializer
 				false)
 		).isAccepted())
 		{
-			player.sendMessage(Text.literal("[AutoReplant] Failed to interact with block..."));
+			player.sendMessage(Text.literal("[AutoReplant] Failed to interact with block..."), false);
 		}
 		return ActionResult.FAIL;
 	}
