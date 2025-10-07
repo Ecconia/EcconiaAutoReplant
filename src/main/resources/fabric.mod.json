@@ -1,36 +1,35 @@
 {
-  "schemaVersion": 1,
-  "id": "ecconia-auto-replant",
-  "version": "${version}",
-  "name": "Ecconia's Auto Replanter",
-  "description": "Harvests and replants crops on interaction.",
-  "authors": [
-    "Ecconia"
-  ],
-  "contact": {
-    "sources": "https://github.com/Ecconia/EcconiaAutoReplant",
-    "issues": "https://github.com/Ecconia/EcconiaAutoReplant/issues"
-  },
-  "license": "GPLv3",
-  "icon": "assets/ecconia-auto-replant/icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "client": [
-      "de.ecconia.fabric.autoreplant.AutoReplant"
-    ]
-  },
-  "mixins": [
-    "ecconia-auto-replant.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.14.9",
-    "fabric-api": "*",
-    "minecraft": "~1.20",
-    "java": ">=17",
-    "fabric-key-binding-api-v1": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
-  },
-  "accessWidener": "ecconia-auto-replant.accesswidener"
+	"schemaVersion": 1,
+	"id": "ecconia-auto-replant",
+	"version": "${version}",
+	"name": "Ecconia's Auto Replanter",
+	"description": "Harvests and replants crops on interaction.",
+	"authors": [
+		"Ecconia"
+	],
+	"contact": {
+		"sources": "https://github.com/Ecconia/EcconiaAutoReplant",
+		"issues": "https://github.com/Ecconia/EcconiaAutoReplant/issues"
+	},
+	"license": "GPLv3",
+	"icon": "assets/ecconia-auto-replant/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"de.ecconia.fabric.autoreplant.AutoReplant"
+		]
+	},
+	"mixins": [
+		{
+			"config": "ecconia-auto-replant.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"accessWidener": "ecconia-auto-replant.accesswidener"
 }
