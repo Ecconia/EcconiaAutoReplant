@@ -20,14 +20,15 @@ repositories {
 
 loom {
 	splitEnvironmentSourceSets()
-
+	
 	mods {
 		"ecconia-auto-replant" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
 	}
-
+	
+	accessWidenerPath = file("src/client/resources/ecconia-auto-replant.client.accesswidener")
 }
 
 dependencies {

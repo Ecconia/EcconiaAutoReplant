@@ -31,5 +31,5 @@
 		"java": ">=21",
 		"fabric-api": "*"
 	},
-	"accessWidener": "ecconia-auto-replant.accesswidener"
+	"accessWidener": "ecconia-auto-replant.client.accesswidener"
 }
